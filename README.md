@@ -1,4 +1,4 @@
-# forest_scanner
+# Forest Scanner
 
 A flutter project for forest scanner application on android tablet.
 
