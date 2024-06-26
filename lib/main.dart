@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:forest_scanner/pages/home.dart';
+import 'package:forest_scanner/pages/check_device.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Forest Scanner Home Page'),
+      home: //const MyHomePage(title: 'Forest Scanner Home Page'),
+          const CheckDevice(),
     );
   }
 }

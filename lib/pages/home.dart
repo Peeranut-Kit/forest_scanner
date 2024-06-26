@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forest_scanner/components/home/maincontent.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -33,21 +34,15 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             bottom: TabBar(
               controller: _tabController,
               tabs: const [
-                Tab(text: "1"),
-                Tab(text: "2"),
+                Tab(child: Text("1")),
+                Tab(child: Text("2")),
                 Tab(child: Text("3"))
               ],
             )),
         body: TabBarView(controller: _tabController, children: const [
-          Center(
-            child: Text("1"),
-          ),
-          Center(
-            child: Text("2"),
-          ),
-          Center(
-            child: Text("3"),
-          ),
+          Maincontent(),
+          Maincontent(),
+          Maincontent(),
         ]));
   }
 }

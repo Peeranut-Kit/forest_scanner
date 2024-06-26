@@ -19,15 +19,39 @@ class _MaincontentState extends State<Maincontent> {
                 crossAxisCount: 5,
                 crossAxisSpacing: 10.0,
                 mainAxisSpacing: 10.0),
+            itemCount: 9,
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {},
                 child: const Card(
-                  child: Column(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        "Axxxxxxxx",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Title: TaskA",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Detail: description",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
                 ),
               );
-            }
-        )
-    );
+            }));
   }
 }
