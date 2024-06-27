@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:forest_scanner/components/home/maincontent.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -30,13 +28,30 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     return Scaffold(
         appBar: AppBar(
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            title: Text(widget.title),
+            title: const Padding(
+              padding: EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+              child: Text(
+                "หน้าหลัก",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+            ),
             bottom: TabBar(
               controller: _tabController,
               tabs: const [
-                Tab(child: Text("1")),
-                Tab(child: Text("2")),
-                Tab(child: Text("3"))
+                Tab(
+                    child: Text(
+                  "งานที่เหลือ",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                )),
+                Tab(
+                    child: Text(
+                  "งานที่สำเร็จ",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                )),Tab(
+                    child: Text(
+                  "ประวัติการอัพโหลด",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                )),
               ],
             )),
         body: TabBarView(controller: _tabController, children: const [
