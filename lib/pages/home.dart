@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:forest_scanner/components/home/maincontent.dart';
+import 'package:forest_scanner/components/home/done_content.dart';
+import 'package:forest_scanner/components/home/log_content.dart';
+import 'package:forest_scanner/components/home/task_content.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -55,9 +57,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               ],
             )),
         body: TabBarView(controller: _tabController, children: const [
-          Maincontent(),
-          Maincontent(),
-          Maincontent(),
+          TaskContent(),
+          DoneContent(),
+          LogContent(),
         ]));
   }
 }

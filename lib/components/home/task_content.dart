@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 //import 'package:forest_scanner/components/home/taskcard.dart';
 
-class Maincontent extends StatefulWidget {
-  const Maincontent({super.key});
+class TaskContent extends StatefulWidget {
+  const TaskContent({super.key});
 
   @override
-  State<Maincontent> createState() => _MaincontentState();
+  State<TaskContent> createState() => _TaskContentState();
 }
 
-class _MaincontentState extends State<Maincontent> {
+class _TaskContentState extends State<TaskContent> {
   int taskQuantity = 9;
   @override
   Widget build(BuildContext context) {
