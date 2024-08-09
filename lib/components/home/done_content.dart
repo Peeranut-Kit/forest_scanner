@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forest_scanner/components/card/taskcard.dart';
 
 class DoneContent extends StatefulWidget {
   const DoneContent({super.key});
@@ -35,38 +36,7 @@ class _DoneContentState extends State<DoneContent> {
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {},
-                      child: const Card(
-                        margin: EdgeInsets.all(5),
-                        child: Padding(
-                          padding: EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Text(
-                                "Task: #Axxxxxxxx",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "Topic: N/A",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "Detail: N/A",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      child: const TaskCard(),
                     );
                   }),
             ),

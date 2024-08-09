@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forest_scanner/pages/ongoingtask.dart';
 
 class CheckDevice extends StatefulWidget {
   const CheckDevice({super.key});
@@ -68,9 +69,9 @@ class _CheckDeviceState extends State<CheckDevice> {
           ),
           FloatingActionButton(
               onPressed: () {
-                /*Navigator.push(
-                    context, MaterialPageRoute(builder: (ctx) => {}));*/
-              },
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (ctx) => const Ongoingtask()));
+                },
               child: const Text("Start",
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)))
         ],

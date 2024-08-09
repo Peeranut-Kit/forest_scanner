@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:forest_scanner/components/home/taskcard.dart';
+import 'package:forest_scanner/components/card/taskcard.dart';
+import 'package:forest_scanner/pages/pretask.dart';
 
 class TaskContent extends StatefulWidget {
   const TaskContent({super.key});
@@ -10,6 +11,7 @@ class TaskContent extends StatefulWidget {
 
 class _TaskContentState extends State<TaskContent> {
   int taskQuantity = 9;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,39 +37,11 @@ class _TaskContentState extends State<TaskContent> {
                   itemCount: taskQuantity,
                   itemBuilder: (context, index) {
                     return GestureDetector(
-                      onTap: () {},
-                      child: const Card(
-                        margin: EdgeInsets.all(5),
-                        child: Padding(
-                          padding: EdgeInsets.all(15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: [
-                              Text(
-                                "Task: #Axxxxxxxx",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "Topic: N/A",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "Detail: N/A",
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (ctx) => const Pretask()));
+                },
+                      child: const TaskCard(),
                     );
                   }),
             ),
